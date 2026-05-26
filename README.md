@@ -1,38 +1,7 @@
 # printfTester
-
 > A fast, detailed tester for the **ft_printf** project at 42 school.
-## Structure
 
-printfTester/
-├── Makefile
-├── README.md
-├── tests/               # One .cpp test file per format specifier / flag
-│   ├── c_test.cpp           # %c
-│   ├── s_test.cpp           # %s
-│   ├── p_test.cpp           # %p
-│   ├── d_test.cpp           # %d
-│   ├── i_test.cpp           # %i
-│   ├── u_test.cpp           # %u
-│   ├── x_test.cpp           # %x
-│   ├── upperx_test.cpp      # %X
-│   ├── percent_test.cpp     # %%
-│   ├── mix_test.cpp         # mixed specifiers
-│   ├── minus_test.cpp       # - flag (bonus)
-│   ├── 0_test.cpp           # 0 flag (bonus)
-│   ├── dot_test.cpp         # . precision (bonus)
-│   ├── sharp_test.cpp       # # flag (bonus)
-│   ├── space_test.cpp       # ' ' flag (bonus)
-│   └── +_test.cpp           # + flag (bonus)
-└── utils/               # Shared test utilities
-    ├── check.cpp / .hpp     # OK / KO result checking
-    ├── color.cpp / .hpp     # Terminal color output
-    ├── leaks.cpp / .hpp     # Custom malloc/free leak tracking
-    ├── sigsegv.cpp / .hpp   # Segfault handler
-    └── print.hpp            # Core test engine (fork + pipe + compare)
-
----
-
-## ⚡ Setup
+## Setup
 
 Clone this tester **inside** your ft_printf project:
 
