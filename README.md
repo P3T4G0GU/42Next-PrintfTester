@@ -1,13 +1,8 @@
 # printfTester
 
 > A fast, detailed tester for the **ft_printf** project at 42 school.
-> Inspired by [Tripouille/printfTester](https://github.com/Tripouille/printfTester), rebuilt and improved.
+## Structure
 
----
-
-## 📁 Structure
-
-```
 printfTester/
 ├── Makefile
 ├── README.md
@@ -34,18 +29,15 @@ printfTester/
     ├── leaks.cpp / .hpp     # Custom malloc/free leak tracking
     ├── sigsegv.cpp / .hpp   # Segfault handler
     └── print.hpp            # Core test engine (fork + pipe + compare)
-```
 
 ---
 
 ## ⚡ Setup
 
-Clone this tester **inside** your ft_printf folder:
+Clone this tester **inside** your ft_printf project:
 
 ```bash
-cd your-ft_printf-folder/
-git clone https://github.com/almehmet/printfTester
-cd printfTester
+cd inside the  printfTester
 ```
 
 The Makefile automatically looks for your ft_printf one level up (`../`).
@@ -53,27 +45,15 @@ Your ft_printf folder must contain:
 - A `Makefile` that produces `libftprintf.a`
 - A `ft_printf.h` header
 
-If your project is somewhere else, edit `LIBFT_PATH` in the Makefile.
-
 ---
 
-## 🚀 Usage
+##  Usage
 
 ### Run all mandatory tests
 ```bash
 make
 # or
 make m
-```
-
-### Run all bonus tests
-```bash
-make b
-```
-
-### Run all tests (mandatory + bonus)
-```bash
-make a
 ```
 
 ### Run a single category
@@ -115,7 +95,7 @@ make re         # fclean + full rebuild and rerun
 
 ---
 
-## 📊 Output legend
+##Output legend
 
 Each category prints its results inline:
 
@@ -152,7 +132,7 @@ This means your ft_printf is tested against the real libc printf output, not har
 
 ---
 
-## 📝 failures.log
+## failures.log
 
 When any test fails the tester saves a `failures.log` in the tester directory:
 
@@ -175,13 +155,13 @@ This shows the exact format string, arguments, and both outputs side by side so 
 
 ---
 
-## ⚡ Fast compilation
+##  Fast compilation
 
 This tester compiles your libftprintf **once** and the 4 utils files **once** at the start. Each individual test then just compiles its small test file and links — taking milliseconds per category instead of recompiling everything every time.
 
 ---
 
-## ⚠️ If all tests pass but Moulinette still fails
+## If all tests pass but Moulinette still fails
 
 - Make sure your Makefile compiles with `-Wall -Wextra -Werror` and no warnings
 - Make sure your library is named `libftprintf.a` (not `libft_printf.a` or anything else)
@@ -192,38 +172,6 @@ This tester compiles your libftprintf **once** and the 4 utils files **once** at
   ```bash
   valgrind --leak-check=full ./d_test
   ```
-
----
-
-## 📋 What's tested
-
-### Mandatory
-| Category | What it tests |
-|----------|--------------|
-| `c` | `%c` — single character, including null char and overflow |
-| `s` | `%s` — strings including empty string and NULL pointer |
-| `p` | `%p` — pointer addresses |
-| `d` | `%d` — signed decimal integers |
-| `i` | `%i` — signed integers (same as %d) |
-| `u` | `%u` — unsigned integers |
-| `x` | `%x` — lowercase hex |
-| `upperx` | `%X` — uppercase hex |
-| `percent` | `%%` — literal percent sign |
-| `mix` | all specifiers mixed in one format string |
-
-### Bonus
-| Category | What it tests |
-|----------|--------------|
-| `-` | left-justify flag across all specifiers |
-| `0` | zero-padding flag across `d`, `i`, `u`, `x`, `X` |
-| `.` | precision flag for `s`, `d`, `i`, `u`, `x`, `X` |
-| `#` | alternate form flag for `x` and `X` |
-| `' '` | space flag for `s`, `d`, `i` |
-| `+` | force sign flag for `d` and `i` |
-
----
-
-## 🙏 Credits
 
 - Original tester: [Tripouille/printfTester](https://github.com/Tripouille/printfTester)
 - This version: almehmet@student.42.fr
