@@ -143,4 +143,3 @@ This tester compiles your libftprintf **once** and the 4 utils files **once** at
   ```
 
 - Original tester: [Tripouille/printfTester](https://github.com/Tripouille/printfTester)
-- This version: almehmet@student.42.fr
